@@ -1,0 +1,16 @@
+services:
+
+  backend:
+    image: ghcr.io/jcmtya/bookstore-backend:8.1.0
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  frontend:
+    image: ghcr.io/jcmtya/bookstore-frontend:8.1.0
+    ports:
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
