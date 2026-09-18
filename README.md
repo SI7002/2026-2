@@ -14,7 +14,9 @@ backend are distributed as versioned Docker images through GitHub Container Regi
 .
 ├── README.md
 ├── .env.example
+├── .gitignore
 ├── docker-compose.yml
+│
 ├── database/
 │   ├── schema.sql
 │   ├── seed.sql
@@ -24,7 +26,26 @@ backend are distributed as versioned Docker images through GitHub Container Regi
 │       ├── create_roles.sql
 │       ├── grants.sql
 │       └── verify.sql
-└── docs/
+│
+└── data-platform/
+    └── ingestion/
+        └── batch/
+            ├── src/
+            │   ├── common/
+            │   │   ├── etl_common.zip
+            │   │   ├── raw_ingestion_core.py
+            │   │   └── common_libs/
+            │   │       ├── __init__.py
+            │   │       ├── schema_registry.py
+            │   │       ├── utils.py
+            │   │       └── watermark_store.py
+            │   │
+            │   └── raw/
+            │       └── raw_glue_adapter.py
+            │
+            └── orchestration/
+                └── step-functions/
+                    └── bookstore_ingest_entities.asl.json
 ```
 
 ## Requirements
