@@ -106,6 +106,18 @@ Node.js + Express
 Amazon RDS for PostgreSQL
 ```
 
+## Data 
+
+Data could be download from:
+
+Postgress Operational data: Data store in the database.
+
+https://si7002-2026-2-453927748990-us-east-1-an.s3.us-east-1.amazonaws.com/structured-data/bookstore_history_data.dump
+
+Behavioral data: Clickstream logs.
+
+https://si7002-2026-2-453927748990-us-east-1-an.s3.us-east-1.amazonaws.com/semistructured-data/clickstream_history_sample.jsonl
+
 ## Course Use
 
 This repository supports the BookStore Co. case used throughout the
